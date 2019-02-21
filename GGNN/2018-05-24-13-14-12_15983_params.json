@@ -1,0 +1,43 @@
+{
+  "num_epochs": 3000,
+  "patience": 25,
+  "learning_rate": 0.001,
+  "clamp_gradient_norm": 1.0,
+  "out_layer_dropout_keep_prob": 1.0,
+  "hidden_size": 300,
+  "num_timesteps": 4,
+  "use_graph": true,
+  "tie_fwd_bkwd": true,
+  "task_ids": [
+    0,
+    1,
+    2
+  ],
+  "random_seed": 0,
+  "train_file": "train_graphs.json",
+  "valid_file": "valid_graphs.json",
+  "batch_size": 100000,
+  "use_edge_bias": false,
+  "use_propagation_attention": false,
+  "use_edge_msg_avg_aggregation": true,
+  "residual_connections": {
+    "2": [
+      0
+    ],
+    "4": [
+      0,
+      2
+    ]
+  },
+  "layer_timesteps": [
+    2,
+    2,
+    1,
+    2,
+    1
+  ],
+  "graph_rnn_cell": "GRU",
+  "graph_rnn_activation": "tanh",
+  "graph_state_dropout_keep_prob": 1.0,
+  "task_sample_ratios": {}
+}
